@@ -54,11 +54,13 @@
             Si el caso de prueba es exitoso, hacer un commit
         */
     //10. Invocar a calcularTotal y lo que devuelve guardar en la variable valorTotal
+    valorTotal = calcularTotal(54, 5.4, 5.832);
     //11. Mostrar el resultado en el componente lblTotal
+    mostrarTexto("lblTotal", valorTotal);
      /*
             Caso de prueba: 
                 precioProducto: 5.4  cantidad: 10 descuento: 10
-					--valorSubtotal: 5.4
+					--valorSubtotal: 54
 					--descuento: 5.4
 					--IVA: 5.832
                 Total esperado: 54.432
