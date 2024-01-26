@@ -19,7 +19,7 @@
     //4. Recuperar el porcentaje de descuento como int
     porcentajeDescuento = recuperarInt("txtPorcentajeDescuento");
     //4. Invocar a calcularSubtotal y el retorno guardar en la variable valorSubtotal
-    valorSubtotal=calcularSubtotal(5.4, 10);
+    valorSubtotal=calcularSubtotal(precioProducto, cantidad);
     //5. Mostrar valorSubtotal en el componente lblSubtotal
     mostrarTexto("lblSubtotal", valorSubtotal);
         /*
@@ -29,7 +29,7 @@
             Si el caso de prueba es exitoso, hacer un commit
          */
     //6. Invocar a calcularDescuento y lo que devuelve guardar en la variable valorDescuento
-    valorDescuento = calcularValorDescuento(5.4, 10, 10);
+    valorDescuento = calcularValorDescuento(valorSubtotal, porcentajeDescuento);
     //7. Mostrar el resultado en el componente lblDescuento
     mostrarTexto("lblDescuento", valorDescuento);
         /*
@@ -40,7 +40,7 @@
          */
     //8. Invocar a calcularIVA y lo que devuelve guardar en la variable valorIVA
     //   El IVA debe calcularse sobre el valor del subtotal menos el descuento
-    valorIVA = calcularIva(48.6);
+    valorIVA = calcularIva(valorSubtotal-valorDescuento);
 	
     //9. Mostrar el resultado en el componente lblValorIVA 
     mostrarTexto("lblValorIVA", valorIVA);   
@@ -54,7 +54,7 @@
             Si el caso de prueba es exitoso, hacer un commit
         */
     //10. Invocar a calcularTotal y lo que devuelve guardar en la variable valorTotal
-    valorTotal = calcularTotal(54, 5.4, 5.832);
+    valorTotal = calcularTotal(valorSubtotal, valorDescuento, valorIVA);
     //11. Mostrar el resultado en el componente lblTotal
     mostrarTexto("lblTotal", valorTotal);
      /*
@@ -67,6 +67,8 @@
             Si el caso de prueba es exitoso, hacer un commit
         */
     //12. Mostrar un resumen en el componente lblResumen, si no existe debe agregarlo
+    let resumen = "Valor a pagar por " + cantidad +" "+nombreProducto+" "+"con "+porcentajeDescuento+"% "+"de descuento: "+"USD "+valorTotal;
+    mostrarTexto("lblResumen",resumen);
         /*
             Ejemplo: 
                 Valor a pagar por 20 cerveza corona con 10% de descuento: USD 48.75
