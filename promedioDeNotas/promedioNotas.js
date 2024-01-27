@@ -1,6 +1,5 @@
 calcularPromediosNotas = function(){
 let promedio;
-let resultado;
 let nota1Float;
 let nota2Float;
 let nota3Float;
@@ -15,6 +14,10 @@ decimales = promedio.toFixed(2);
 
 mostrarTexto("lblResultado", decimales);
 
-
+if(decimales > 7){
+    mostrarImagen("imgNotas", "imagenes/exito.gif");
+}else{
+    mostrarImagen("imgNotas", "imagenes/fracaso.gif");
+}
 }
 
