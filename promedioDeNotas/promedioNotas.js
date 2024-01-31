@@ -14,10 +14,18 @@ decimales = promedio.toFixed(2);
 
 mostrarTexto("lblResultado", decimales);
 
-if(decimales > 7){
-    mostrarImagen("imgNotas", "imagenes/exito.gif");
-}else{
+if(decimales > 0 && decimales < 5){
     mostrarImagen("imgNotas", "imagenes/fracaso.gif");
+    mostrarTexto("lblmensaje", "REPROBADO");
+}else if(decimales >= 5 && decimales <= 8 ){
+    mostrarImagen("imgNotas", "imagenes/buentrabajo.gif");
+    mostrarTexto("lblmensaje", "BUEN TRABAJO");
+}else if(decimales >8 && decimales <= 10){
+    mostrarImagen("imgNotas", "imagenes/exito.gif");
+    mostrarTexto("lblmensaje", "EXCELENTE");
+}else if(decimales < 0 || decimales > 10){
+    mostrarImagen("imgNotas", "imagenes/incorecto.gif");
+    mostrarTexto("lblmensaje", "DATOS INCORRECTOS");
 }
 }
 
