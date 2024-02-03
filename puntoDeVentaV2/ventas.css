@@ -1,0 +1,244 @@
+body{
+  background-color: black;
+    background-size: cover;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.principal{
+    display: flex;
+    background-color: rgba(240, 248, 255, 0.8);
+    margin-left: 0px;
+    margin-right:0px;
+    flex-direction: row;
+    margin-top: 100px;
+    height: 800px;
+
+}
+
+.ingresoDatos{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.tituloCampo{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 20px;
+}
+
+.error{
+    color:red;
+    font-style: italic;
+    font-size: 16px;
+}
+
+/*.dato{
+position: absolute;
+left: 50%;
+}*/
+.contenedor1{
+    position: absolute;
+    top: 4%;
+    left: 30%;
+    margin: 0%;
+    padding: 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.resultado{
+    position: absolute;
+    top: 18%;
+    left: 75%;
+}
+
+.estiloBoton{
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+
+}
+.estiloBoton:hover {
+    background-color:white; 
+    color: #4CAF50;
+    border:1px;
+    border-color: #4CAF50;
+    border-radius: 5px;
+}
+.estiloBoton:active{
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.boton1{
+    position: absolute;
+    bottom:30%;
+    left: 40%;
+}
+
+.boton2{
+    position: absolute;
+    bottom:30%;
+    left: 60%; 
+}
+
+.punto{
+    position: absolute;
+    top: 20%;
+    left: 30%;
+}
+
+.dato1{
+    position: absolute;
+     top: 30%;
+     left: 30%;
+}
+.producto{
+    position: absolute;
+    top:32%;
+    left: 52%;
+    border-radius: 4px;
+    border-color: #4CAF50;
+    
+    font-size: 20px;
+    color:rgb(85, 83, 83);
+}
+
+.dato2{
+    position: absolute;
+     top: 40%;
+     left: 30%;
+}
+.cantidad{
+    position: absolute;
+    top:42%;
+    left: 52%;
+    border-radius: 4px;
+    border-color: #4CAF50;
+    
+    font-size: 20px;
+    color:rgb(85, 83, 83);
+}
+
+.dato3{
+    position: absolute;
+     top: 50%;
+     left: 30%;
+}
+.precio{
+    position: absolute;
+    top:52%;
+    left: 52%;
+    border-radius: 4px;
+    border-color: #4CAF50;
+    
+    font-size: 20px;
+    color:rgb(85, 83, 83);
+}
+
+.resultado{
+    position: absolute;
+    top: 20%;
+    left: 70%;
+    margin: 0%;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subtotal1{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    color: rgb(52, 52, 163);
+}
+
+.subtotal{
+    position: absolute;
+    top: 20%;
+    left: 36%;
+}
+
+.descuento2{
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    color: rgb(52, 52, 163);
+}
+
+.descuento{
+    position: absolute;
+    top: 40%;
+    left: 41%;
+}
+
+.iva3{
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    color: rgb(52, 52, 163);
+}
+
+.iva{
+    position: absolute;
+    top: 60%;
+    left: 27%;
+}
+
+.total4{
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    color: rgb(52, 52, 163);
+}
+
+.total{
+    position: absolute;
+    top: 80%;
+    left:25%;
+}
+
+.mensaje1{
+    position: absolute;
+    top:35%;
+    left: 40%;
+    color: red;
+}
+
+.mensaje2{
+    position: absolute;
+    top:45%;
+    left: 40%;
+    color: red;
+}
+
+.mensaje{
+    position: absolute;
+    top:55%;
+    left: 40%;
+    color: red;
+}

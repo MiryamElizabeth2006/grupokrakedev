@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="puntoDeVenta.js"></script>
+    <script src="serviciosPuntoDeVenta.js"></script>
+    <script src="utilitarios.js"></script>
+    <link rel="stylesheet" href="ventas.css">
+</head>
+
+<body>
+    <div class="principal">
+        <div class="logoEscuela">
+            <img src="./imagenes/logoKrakeDev.png" width="60%" />
+        </div>
+
+
+        <div class="ingresoDatos">
+            <div class="tituloCampo">
+                <div>
+
+                    <div class="contenedor1">
+                        <br>
+                        <br>
+                        <h2 class="punto">PUNTO DE VENTA</h2>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                        <h3 class="dato1">PRODUCTO</h3>
+                        <input type="text" id="txtProducto" class="producto" />
+                        <h3 id="lblMensaje1" class="mensaje1"></h3>
+
+                        <h3 class="dato2">CANTIDAD</h3>
+                        <input type="text" id="txtCantidad" class="cantidad" />
+                        <h3 id="lblMensaje2" class="mensaje2"></h3>
+
+                        <h3 class="dato3">PRECIO</h3>
+                        <input type="text" id="txtPrecio" class="precio" />
+                        <h3 id="lblMensaje3" class="mensaje"></h3>
+                        <br>
+                        <div class="boton1">
+                            <input class="estiloBoton" type="button" value="TOTAL"
+                             onclick="calcularValorTotal()" />
+                        </div>
+
+
+                        <div class="boton2">
+                            <input class="estiloBoton" type="button" value="LIMPIAR" 
+                             onclick="limpiar();" />
+                        </div>
+
+                    </div>
+
+                    <div class="resultado">
+                        <h3 class="subtotal1">SUBTOTAL:</h3>
+                        <h3 class="subtotal" id="lblSubtotal">0.0</h3>
+
+                        <h3 class="descuento2">DESCUENTO:</h3>
+                        <h3 class="descuento" id="lblDescuento">0.0</h3>
+
+                        <h3 class="iva3">IVA 12%:</h3>
+                        <h3 class="iva" id="lblValorIVA">0.0</h3>
+
+                        <h3 class="total4">TOTAL:</h3>
+                        <h3 class="total" id="lblTotal">0.0</h3>
+                    </div>
+
+
+                </div>
+
+</body>
+
+</html>
