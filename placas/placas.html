@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="placas.js"></script>
+    <script src="serviciosPLacas.js"></script>
+    <script src="utilitariosCadenas.js"></script>
+    <script src="utilitarios.js"></script>
+    <link rel="stylesheet" href="placas.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <h3>INGRESE LA PLACA</h3>
+        <input type="text" id="txtPlaca" />
+        <h3 id="lblValidar"></h3>
+        <h3 id="lblProvincia"></h3>
+        <h3 id="lblTipoVehiculo"></h3>
+        <h3 id="lblPicoPlaca"></h3>
+        <h3 id="lblPicoPlaca1"></h3>
+
+        <div class="errrores">
+            <h3 id="lblErrorMayuscula1"></h3>
+            <h3 id="lblerrorMayuscula"></h3>
+            <h3 id="lblerrorMayuscula3"></h3>
+            <h3 id="errorGuion"></h3>
+            <h3 id="errorDigito1"></h3>
+            <h3 id="errorDigito2"></h3>
+            <h3 id="errorDigito3"></h3>
+            <h3 id="errorDigito4"></h3>
+
+        </div>
+        <input class="boton" type="button" value="VALIDAR PLACA" onclick="validarPLaca();">
+        <input class="boton" type="button" value="LIMPIAR" onclick="limpiar();">
+        <img src="imagenes/transito.png" />
+    </div>
+</body>
+
+</html>

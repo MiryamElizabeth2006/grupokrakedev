@@ -1,0 +1,36 @@
+html, body{
+    background-image: url(imagenes/fondoplaca.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: gainsboro;
+    background-attachment: fixed;
+}
+.contenedor{
+    background-color: rgb(13, 112, 100);
+    padding: 3%;
+    color: white;
+    width: 470px;
+    height:270px;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+}
+
+img{
+    position: absolute;
+    top: 4%;
+    left: 69%;
+    width: 210px;
+    height: 270px;
+}
+
+.boton{
+    background-color: rgb(8, 84, 84);
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
+}
+
+h3{
+    font-size: 15px;
+}
