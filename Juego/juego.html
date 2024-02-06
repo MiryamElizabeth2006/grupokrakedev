@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="juego.js"></script>
+    <script src="serviciosJuego.js"></script>
+    <script src="utilitarios.js"></script>
+    <link rel="stylesheet" href="juego.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>JUEGA PIEDRA, PAPEL O TIJERA</h1>
+        <div class="usuario">
+            <h3 id="lblPuntajeUsuario"></h3>
+            <h3 id="lblObjetoUsuario"></h3>
+            <img src="" id="imgUsuario" />
+        </div>
+        <div class="computadora">
+            <h3 id="lblPuntajeComputador"></h3>
+            <h3 id="lblObjetoComputador"></h3>
+            <img src="" id="imgComputador" />
+        </div>
+
+<div id="contenedorBoton">
+        <h3 id="lblNumero"></h3>
+        <h3 id="lblGanador"></h3>
+        <input type="button" value="NUEVA PARTIDA" onclick="generarElemento();">
+    </div>
+    </div>
+
+</body>
+
+</html>
