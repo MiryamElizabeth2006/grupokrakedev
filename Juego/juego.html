@@ -9,26 +9,26 @@
 </head>
 
 <body>
-        <h1>JUEGA PIEDRA, PAPEL O TIJERA</h1>
+        <center><h1>JUEGA PIEDRA, PAPEL O TIJERA</h1></center>
 
         <div class="usuario">
             <h3 id="lblPuntajeUsuario"></h3>
             <h3 id="lblObjetoUsuario"></h3>
-            <img src="imagenes/piedra.png" id="imgUsuario" onclick="juego();"/>
+            <img src="" id="imgUsuario" class="imgUsuario"/>
         </div>
         <div class="computadora">
             <h3 id="lblPuntajeComputador"></h3>
             <h3 id="lblObjetoComputador"></h3>
-            <img src="" id="imgComputador" />
+            <img src="" id="imgComputador" class="imgComputador"/>
         </div>
 
-<div id="contenedorBoton">
-        <h3 id="lblNumero"></h3>
-        <h3 id="lblGanador"></h3>
-        <input type="button" value="NUEVA PARTIDA" onclick="generarElemento();">
-    </div>
-    
-
+<div class="contenedorBoton">
+        <center><h3 id="lblGanador"></h3></center>
+        <br>
+        <input type="button" value="NUEVA PARTIDA" class="boton" onclick="limpiar();">
+        <input type="button" value="JUGAR" class="boton" onclick="juego();">
+        <br>
+        </div>
 </body>
 
 </html>

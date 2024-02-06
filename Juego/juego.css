@@ -3,6 +3,7 @@ body {
     background-image: url(imagenes/fondojuego.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    color: white;
 }
 
 .contenedor {
@@ -18,11 +19,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     width: 300px;
-    height: 450px;
+    height: 400px;
     color: white;
     position: absolute;
-    top:10%;
-    left: 10%;
+    top:15%;
+    left: 20%;
 }
 
 .computadora {
@@ -30,11 +31,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     width: 300px;
-    height: 450px;
+    height: 400px;
     color: white;
     position: absolute;
-    top:10%;
-    left: 40%;
+    top:15%;
+    right:20%;
    
 }
 
@@ -42,6 +43,32 @@ h1{
     color: white;
 }
 
-img{
+.imgUsuario{
     position: absolute;
+    top:30%;
+    width: 200px;
+    left: 15%;
+}
+
+.imgComputador{
+    position: absolute;
+    top:30%;
+    width: 200px;
+    left: 15%;
+}
+
+.imagenes{
+    position:absolute;
+    top: 40%;
+    left: 3%;
+}
+.contenedorBoton{
+    position:absolute;
+    top: 80%;
+    left: 40%;
+}
+
+.boton{
+    color: white;
+    background-color: black;
 }

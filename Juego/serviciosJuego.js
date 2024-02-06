@@ -80,3 +80,4 @@ generarRutaComputador = function(nombre){
         mostrarImagen("imgComputador", "imagenes/tijera.png");
     }
 }
+ 

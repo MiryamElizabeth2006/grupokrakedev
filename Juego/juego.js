@@ -9,8 +9,7 @@ juego = function(){
     generarRutaUsuario(elemento1);
     generarRutaComputador(elemneto2);
 
-    determinarGanador(elemento1);
-    determinarGanador(elemneto2);
+    determinarGanador(elemento1, elemneto2);
 
     if(elemento1 == elemneto2){
         mostrarTexto("lblGanador","Empate");
@@ -49,5 +48,17 @@ modificarPuntosComputadora = function(){
     if(puntosComputador == 5){
         mostrarTexto("lblGanador", "Computador te ha vencido");
     } 
+}
+
+limpiar = function(){
+    mostrarTexto("lblPuntajeUsuario", "");
+    mostrarTexto("lblObjetoUsuario", "");
+    mostrarTexto("lblPuntajeComputador", "");
+    mostrarTexto("lblObjetoComputador", "");
+    mostrarTexto("lblGanador", "");
+    puntosComputador = 0
+    puntosUsuario = 0
+    mostrarImagen("imgUsuario", "");
+    mostrarImagen("imgComputador", "");
 }
 
