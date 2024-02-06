@@ -63,20 +63,20 @@ determinarGanador = function (eleccionJugador1, eleccionJugador2) {
 
 generarRutaUsuario = function(nombre){
     if(nombre == 1){
-        mostrarImagen("img1", "imagenes/papel.png");
+        mostrarImagen("imgUsuario", "imagenes/piedra.png");
     }else if(nombre == 2){
-        mostrarImagen("img1", "imagenes/piedra.png");
+        mostrarImagen("imgUsuario", "imagenes/papel.png");
     }else if(nombre == 3){
-        mostrarImagen("img1", "imagenes/tijera.png");
+        mostrarImagen("imgUsuario", "imagenes/tijera.png");
     }
 }
 
 generarRutaComputador = function(nombre){
     if(nombre == 1){
-        mostrarImagen("img2", "imagenes/papel.png");
+        mostrarImagen("imgComputador", "imagenes/piedra.png");
     }else if(nombre == 2){
-        mostrarImagen("img2", "imagenes/piedra.png");
+        mostrarImagen("imgComputador", "imagenes/papel.png");
     }else if(nombre == 3){
-        mostrarImagen("img2", "imagenes/tijera.png");
+        mostrarImagen("imgComputador", "imagenes/tijera.png");
     }
 }

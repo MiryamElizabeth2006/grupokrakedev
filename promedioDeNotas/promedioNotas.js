@@ -6,7 +6,8 @@ let nota3Float;
 let decimales;
 
 nota1Float = recuperarFloat("txtNota1");
-nota2Float = recuperarFloat("txtNota2");
+nota2Float = recuperarFloat("txtNota2"); 
+
 nota3Float = recuperarFloat("txtNota3");
 
 promedio = calcularPromedio(nota1Float, nota2Float, nota3Float);

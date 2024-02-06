@@ -2,7 +2,7 @@
 mostrarImagen=function(idComponente,rutaImagen){
     let componente;
     componente=document.getElementById(idComponente);
-    componente.src =  rutaImagen;
+    componente.src = rutaImagen;
 }
 mostrarTexto=function(idComponente,mensaje){
     let componente;

@@ -1,0 +1,47 @@
+html,
+body {
+    background-image: url(imagenes/fondojuego.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contenedor {
+    padding: 5%;
+    margin: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.usuario {
+    background-image: url(imagenes/neon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 450px;
+    color: white;
+    position: absolute;
+    top:10%;
+    left: 10%;
+}
+
+.computadora {
+    background-image: url(imagenes/neon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 450px;
+    color: white;
+    position: absolute;
+    top:10%;
+    left: 40%;
+   
+}
+
+h1{
+    color: white;
+}
+
+img{
+    position: absolute;
+}
