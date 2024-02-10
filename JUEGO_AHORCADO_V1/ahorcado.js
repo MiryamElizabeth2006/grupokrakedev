@@ -44,13 +44,24 @@ mostrarLetra = function(letra, posicion){
 
 }
 
-validar = function(){
+validar = function(letra){
    let letrasEncontradas=0;
     for(let i=0; i < palabraSecreta.length; i++){
-        if(palabraSecreta.charAt(i)==letra){
+        if(palabraSecreta.charAt(i) == letra){
             mostrarLetra(letra, i)
-            letrasEncontradas++
+            letrasEncontradas++;
         }
     }
 }
+
+ingresarLetra = function(){
+
+    let recuperado = recuperarTexto("txtLetra"); 
+    if(esMayuscula(recuperado)){
+        validar(recuperado);
+    }else{
+        alert("Solo se aceptan mayusculas");
+    }
+}
+
 
