@@ -108,5 +108,21 @@ mostrarAhorcado = function(){
     }
 }
 
+limpiar = function(){
+    mostrarTextoEnCaja("txtSecreta", "");
+    mostrarTextoEnCaja("txtLetra", "");
+    mostrarTexto("div0", "");
+    mostrarTexto("div1", "");
+    mostrarTexto("div2", "");
+    mostrarTexto("div3", "");
+    mostrarTexto("div4", "");
+    palabraSecreta = "";
+    intentos = 0;
+    coincidencias = 0;
+    errores = 0;
+    mostrarImagen("ahorcadoImagen", "");
+
+}
+
 
 
