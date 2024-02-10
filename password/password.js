@@ -27,19 +27,19 @@ validarPassword = function(password){
     if (longitud < 8 || longitud > 16) {
         errores += "La contraseña debe tener entre 8 y 16 caracteres. ";
     }
-    if (password != tieneMayuscula) {
+    if ( tieneMayuscula == false) {
         errores += "La contraseña debe contener al menos una letra mayúscula. ";
     }
-    if (password != tieneDigito) {
+    if (tieneDigito == false) {
         errores += "La contraseña debe contener al menos un digito. ";
     }
-    if (password != tieneCaracterEspecial) {
+    if (tieneCaracterEspecial == false) {
         errores += "La contraseña debe contener al menos uno de los siguientes caracteres especiales: *, - o _. ";
     }
     return errores;
 }
 
-function ejecutarValidacion() {
+ejecutarValidacion = function() {
     let recuperar = recuperarTexto("txtPassword");
     let validar = validarPassword(recuperar);
 
