@@ -19,7 +19,7 @@ guardarPalabra = function(){
 
     if(longitudCaracter == 5){
         if(mayuscula == true){
-            palabraSecreta = mayuscula;
+            palabraSecreta = recuperar;
             console.log(recuperar);
         }else if(mayuscula == false){
             alert("Debe ingresar una palabra de 5 letras mayusculas");
@@ -42,5 +42,15 @@ mostrarLetra = function(letra, posicion){
         mostrarTexto("div4", letra)
     }
 
+}
+
+validar = function(){
+   let letrasEncontradas=0;
+    for(let i=0; i < palabraSecreta.length; i++){
+        if(palabraSecreta.charAt(i)==letra){
+            mostrarLetra(letra, i)
+            letrasEncontradas++
+        }
+    }
 }
 
