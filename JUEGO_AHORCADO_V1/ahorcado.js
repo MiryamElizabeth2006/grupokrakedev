@@ -2,6 +2,10 @@
 //Crear Función
 
 let palabraSecreta;
+let intentos = 0;
+let coincidencias = 0;
+let errores = 0;
+
 
 esMayuscula = function(caracter){
      if (caracter >= 'A' && caracter <= 'Z') {
@@ -52,6 +56,13 @@ validar = function(letra){
             letrasEncontradas++;
         }
     }
+
+    if(letrasEncontradas==0){
+        alert("LA LETRA NO ES PARTE DE LA PALABRA");
+        errores++;
+    } else{
+        coincidencias++;
+    }
 }
 
 ingresarLetra = function(){
@@ -59,9 +70,18 @@ ingresarLetra = function(){
     let recuperado = recuperarTexto("txtLetra"); 
     if(esMayuscula(recuperado)){
         validar(recuperado);
+        if(coincidencias == 5){
+            alert("Ha ganado");
+        }
+        if(intentos == 10){
+            alert("Ha perdido");
+        }
     }else{
         alert("Solo se aceptan mayusculas");
     }
+    intentos++;
 }
+
+
 
 
