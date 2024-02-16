@@ -103,6 +103,13 @@ guardar = function () {
                             empleados.push(objetoEmpleado);
                             alert("Empleado Gurdado Correctamente");
                             mostrarEmpleados();
+
+                            deshabilitarComponente("txtCedula");
+                            deshabilitarComponente("txtNombre");
+                            deshabilitarComponente("txtApellido");
+                            deshabilitarComponente("txtSueldo");
+
+                            deshabilitarComponente("btnGuardar");
                         } else {
                             alert("Ya existe un empleado con la cedula " + valorCedula + " " + "En lugar de " + valorCedula);
                         }
