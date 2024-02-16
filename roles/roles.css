@@ -77,13 +77,18 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    
 }
 tbody tr:nth-child(odd) {
-    background-color: #908efc;
+    background-color: #0b6413;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   
   tbody tr:nth-child(even) {
-    background-color: #6a51cf;
+    background-color: #188f32;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   
   tbody tr {
