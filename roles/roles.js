@@ -11,13 +11,7 @@ mostrarOpcionEmpleado = function () {
     ocultarComponente("divRol");
     ocultarComponente("divResumen");
 
-    deshabilitarComponente("txtCedula");
-    deshabilitarComponente("txtNombre");
-    deshabilitarComponente("txtApellido");
-    deshabilitarComponente("txtSueldo");
-
-    deshabilitarComponente("btnGuardar");
-
+    deshabilitarCajaBoton();
     mostrarEmpleados();
 }
 
@@ -88,9 +82,13 @@ guardar = function () {
     caracteresNombre = valorNombre.length;
     caracteresApellido = valorApellido.length;
     if (caracteresCedula == 10) {
+        mostrarTexto("lblErrorCedula", "");
         if (caracteresNombre >= 3 && mayusculaNombre == false) {
+            mostrarTexto("lblErrorNombre", "");
             if (caracteresApellido >= 3 && mayusculaApellido == false) {
+                mostrarTexto("lblErrorApellido", "");
                 if (valorSueldo >= 400 && valorSueldo <= 5000) {
+                    mostrarTexto("lblErrorSueldo", "");
                     if (esNuevo == true) {
                         objetoEmpleado.cedula = valorCedula;
                         objetoEmpleado.nombre = valorNombre;
@@ -103,13 +101,7 @@ guardar = function () {
                             empleados.push(objetoEmpleado);
                             alert("Empleado Gurdado Correctamente");
                             mostrarEmpleados();
-
-                            deshabilitarComponente("txtCedula");
-                            deshabilitarComponente("txtNombre");
-                            deshabilitarComponente("txtApellido");
-                            deshabilitarComponente("txtSueldo");
-
-                            deshabilitarComponente("btnGuardar");
+                            deshabilitarCajaBoton();
                         } else {
                             alert("Ya existe un empleado con la cedula " + valorCedula + " " + "En lugar de " + valorCedula);
                         }
@@ -169,4 +161,13 @@ mostrarEmpleados = function () {
     }
     contenidoTabla += "</table>"
     cmpTabla.innerHTML = contenidoTabla;
+}
+
+deshabilitarCajaBoton = function(){
+    deshabilitarComponente("txtCedula");
+    deshabilitarComponente("txtNombre");
+    deshabilitarComponente("txtApellido");
+    deshabilitarComponente("txtSueldo");
+
+    deshabilitarComponente("btnGuardar");
 }
