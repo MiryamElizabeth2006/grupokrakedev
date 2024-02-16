@@ -75,17 +75,17 @@ guardar = function () {
 
     let objetoEmpleado = {};
 
-    let mayusculaNombre = esMayuscula("txtNombre");
-    let mayusculaApellido = esMayuscula("txtApellido");
+    let mayusculaNombre = esMayuscula(valorNombre);
+    let mayusculaApellido = esMayuscula(valorApellido);
 
     caracteresCedula = valorCedula.length;
     caracteresNombre = valorNombre.length;
     caracteresApellido = valorApellido.length;
     if (caracteresCedula == 10) {
         mostrarTexto("lblErrorCedula", "");
-        if (caracteresNombre >= 3 && mayusculaNombre == false) {
+        if (caracteresNombre >= 3 && mayusculaNombre == true) {
             mostrarTexto("lblErrorNombre", "");
-            if (caracteresApellido >= 3 && mayusculaApellido == false) {
+            if (caracteresApellido >= 3 && mayusculaApellido == true) {
                 mostrarTexto("lblErrorApellido", "");
                 if (valorSueldo >= 400 && valorSueldo <= 5000) {
                     mostrarTexto("lblErrorSueldo", "");
