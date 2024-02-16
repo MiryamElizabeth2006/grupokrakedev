@@ -91,9 +91,9 @@ tbody tr:nth-child(odd) {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   
-  tbody tr {
+  /*tbody tr {
     background-image: url(noise.png);
-  }
+  }*/
   
   table {
     background-color: #0b0c0c;
