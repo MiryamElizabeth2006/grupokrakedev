@@ -53,7 +53,7 @@ agregarEmpleado = function (empleado) {
     }
 }
 
-esMayuscula = function (caracter) {
+Mayuscula = function (caracter) {
     if (caracter >= 'A' && caracter <= 'Z') {
         return true;
     } else {
@@ -75,8 +75,8 @@ guardar = function () {
 
     let objetoEmpleado = {};
 
-    let mayusculaNombre = esMayuscula(valorNombre);
-    let mayusculaApellido = esMayuscula(valorApellido);
+    let mayusculaNombre = Mayuscula(valorNombre);
+    let mayusculaApellido = Mayuscula(valorApellido);
 
     caracteresCedula = valorCedula.length;
     caracteresNombre = valorNombre.length;
