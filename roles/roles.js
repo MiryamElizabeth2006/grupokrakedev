@@ -75,8 +75,8 @@ guardar = function () {
 
     let objetoEmpleado = {};
 
-    let mayusculaNombre = Mayuscula(valorNombre);
-    let mayusculaApellido = Mayuscula(valorApellido);
+    let mayusculaNombre = mayuscula(valorNombre);
+    let mayusculaApellido = mayuscula(valorApellido);
 
     caracteresCedula = valorCedula.length;
     caracteresNombre = valorNombre.length;
