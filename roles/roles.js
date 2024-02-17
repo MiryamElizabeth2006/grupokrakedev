@@ -42,6 +42,18 @@ buscarEmpleado = function (cedula) {
 }
 
 
+modificarEmpleado = function (empleado) {
+    let empleadoEncontrado = buscarEmpleado(empleado.cedula);
+
+    if (empleadoEncontrado != null) {
+        empleadoEncontrado.nombre = empleado.nombre;
+        empleadoEncontrado.apellido = empleado.apellido;
+        empleadoEncontrado.sueldo = empleado.sueldo;
+    }
+
+}
+
+
 agregarEmpleado = function (empleado) {
     let resultadoEmpleado;
     resultadoEmpleado = buscarEmpleado(empleado.cedula);
@@ -96,10 +108,15 @@ guardar = function () {
                         objetoEmpleado.sueldo = valorSueldo;
 
                         empleadoGuardados = agregarEmpleado(objetoEmpleado);
-
                         if (empleadoGuardados == true) {
                             empleados.push(objetoEmpleado);
                             alert("Empleado Gurdado Correctamente");
+                            esNuevo = false;
+                            mostrarEmpleados();
+
+                        } else if (empleadoGuardados == false) {
+                            modificarEmpleado(objetoEmpleado);
+                            alert("Empleado Modificado Exitosamente");
                             mostrarEmpleados();
                             deshabilitarCajaBoton();
                         } else {
@@ -122,9 +139,6 @@ guardar = function () {
     }
 
 }
-
-
-
 
 
 mostrarOpcionRol = function () {
@@ -163,7 +177,7 @@ mostrarEmpleados = function () {
     cmpTabla.innerHTML = contenidoTabla;
 }
 
-deshabilitarCajaBoton = function(){
+deshabilitarCajaBoton = function () {
     deshabilitarComponente("txtCedula");
     deshabilitarComponente("txtNombre");
     deshabilitarComponente("txtApellido");
@@ -171,3 +185,36 @@ deshabilitarCajaBoton = function(){
 
     deshabilitarComponente("btnGuardar");
 }
+
+
+ejecutarBusqueda = function () {
+    let valorCedula = recuperarTexto("txtBusquedaCedula");
+    let empleado = buscarEmpleado(valorCedula);
+
+    if (empleado == null) {
+        alert("Empleado no Existe");
+    } else {
+        mostrarTextoEnCaja("txtCedula", empleado.cedula);
+        mostrarTextoEnCaja("txtNombre", empleado.nombre);
+        mostrarTextoEnCaja("txtApellido", empleado.apellido);
+        mostrarTextoEnCaja("txtSueldo", empleado.sueldo);
+    }
+
+    habilitarComponente("txtNombre");
+    habilitarComponente("txtApellido");
+    habilitarComponente("txtSueldo");
+
+    deshabilitarComponente("txtCedula");
+
+}
+
+/*limpiar = function () {
+    mostrarTexto("lblErrorCedula", "");
+    mostrarTexto("lblErrorNombre", "");
+    mostrarTexto("lblErrorApellido", "");
+    mostrarTexto("lblErrorSueldo", "");
+
+    esNuevo = false;
+
+    deshabilitarCajaBoton();
+}*/
