@@ -53,7 +53,7 @@ agregarEmpleado = function (empleado) {
     }
 }
 
-Mayuscula = function (caracter) {
+mayuscula = function (caracter) {
     if (caracter >= 'A' && caracter <= 'Z') {
         return true;
     } else {
