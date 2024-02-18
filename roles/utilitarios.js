@@ -19,7 +19,7 @@ recuperarTexto=function(idComponente){
     let componente;
     let valorIngresado;
     componente=document.getElementById(idComponente);
-    valorIngresado=componente.value;
+    valorIngresado=componente.value.trim();
     return valorIngresado;
 }
 

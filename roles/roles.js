@@ -111,10 +111,12 @@ guardar = function () {
                         if (empleadoGuardados == true) {
                             empleados.push(objetoEmpleado);
                             alert("Empleado Gurdado Correctamente");
-                            esNuevo = false;
                             mostrarEmpleados();
+                            limpiar();
+                            esNuevo = false
 
                         } else if (empleadoGuardados == false) {
+
                             modificarEmpleado(objetoEmpleado);
                             alert("Empleado Modificado Exitosamente");
                             mostrarEmpleados();
@@ -194,27 +196,35 @@ ejecutarBusqueda = function () {
     if (empleado == null) {
         alert("Empleado no Existe");
     } else {
+        alert("Empleado encontrado");
         mostrarTextoEnCaja("txtCedula", empleado.cedula);
         mostrarTextoEnCaja("txtNombre", empleado.nombre);
         mostrarTextoEnCaja("txtApellido", empleado.apellido);
         mostrarTextoEnCaja("txtSueldo", empleado.sueldo);
+
+        
     }
+
+    esNuevo = true;
+
+    deshabilitarComponente("txtCedula");
 
     habilitarComponente("txtNombre");
     habilitarComponente("txtApellido");
     habilitarComponente("txtSueldo");
-
-    deshabilitarComponente("txtCedula");
-
+    
+    habilitarComponente("btnGuardar");  
 }
 
-/*limpiar = function () {
-    mostrarTexto("lblErrorCedula", "");
-    mostrarTexto("lblErrorNombre", "");
-    mostrarTexto("lblErrorApellido", "");
-    mostrarTexto("lblErrorSueldo", "");
+limpiar = function () {
+
+    mostrarTextoEnCaja("txtCedula", " ");
+    mostrarTextoEnCaja("txtNombre", " ");
+    mostrarTextoEnCaja("txtApellido", " ");
+    mostrarTextoEnCaja("txtSueldo", " ");
+    mostrarTextoEnCaja("txtBusquedaCedula", " ");
 
     esNuevo = false;
 
     deshabilitarCajaBoton();
-}*/
+}
