@@ -6,9 +6,9 @@ let empleados = [
 
 let esNuevo = false;
 
-mostrarOpcionEmpleado = function () {
-    mostrarComponente("divEmpleado");
-    ocultarComponente("divRol");
+mostrarOpcionRol = function () {
+    mostrarComponente("divRol");
+    ocultarComponente("divEmpleado");
     ocultarComponente("divResumen");
 
     deshabilitarCajaBoton();
@@ -143,9 +143,10 @@ guardar = function () {
 }
 
 
-mostrarOpcionRol = function () {
-    mostrarComponente("divRol");
-    ocultarComponente("divEmpleado");
+mostrarOpcionEmpleado
+ = function () {
+    mostrarComponente("divEmpleado");
+    ocultarComponente("divRol");
     ocultarComponente("divResumen");
 }
 
@@ -212,7 +213,7 @@ ejecutarBusqueda = function () {
     habilitarComponente("txtNombre");
     habilitarComponente("txtApellido");
     habilitarComponente("txtSueldo");
-    
+
     habilitarComponente("btnGuardar");  
 }
 
@@ -228,3 +229,22 @@ limpiar = function () {
 
     deshabilitarCajaBoton();
 }
+
+buscarPorRol = function(){
+    let rolCedula= recuperarTexto("txtBusquedaCedulaRol");
+    let busqueda = buscarEmpleado(rolCedula);
+
+    if (busqueda != null){
+        alert("Datos encontrados");
+        mostrarTexto("infoCedula", busqueda.cedula);
+        mostrarTexto("infoNombre", busqueda.nombre +" "+ busqueda.apellido);
+        mostrarTexto("infoSueldo", busqueda.sueldo);
+
+    }else{
+        alert("Datos no encontrados", "");
+        mostrarTexto("infoCedula", "");
+        mostrarTexto("infoNombre", "");
+        mostrarTexto("infoSueldo", "");  
+    }
+}
+
